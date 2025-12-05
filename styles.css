@@ -5,10 +5,9 @@ body {
     /* BACKGROUND IMAGE STYLES: Image covers the left 50% */
     background-image: url('Car background.jpg'); 
     background-repeat: no-repeat; 
-    background-size: 50% 100%; /* Image covers exactly the left half of the viewport */
+    background-size: 50% ; /* Image covers exactly the left half of the viewport */
     background-position: left center; 
-    background-color: #f0f2f5; /* Solid color for the right half of the screen */
-    background-attachment: fixed;
+
     /* END BACKGROUND IMAGE STYLES */
 
     margin: 0;
