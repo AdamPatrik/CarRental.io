@@ -1,8 +1,20 @@
 /* General Styling and Layout */
 body {
     font-family: Arial, Helvetica, sans-serif; /* Clean, standard font */
-    background-color: green; /* Light, neutral background */
+  /* 1. Set the image path */
+    background-image: url('Car background.jpg'); 
+    
+    /* 2. Scale the image to cover the entire viewport */
+    background-size: cover; 
+    
+    /* 3. Center the image horizontally and vertically */
+    background-position: center;
+    
+    /* 4. Ensure the image doesn't scroll with the content */
+    background-attachment: fixed;
+    
     margin: 0;
+    /* ... other properties ... */
 }
 
 .login-page {
