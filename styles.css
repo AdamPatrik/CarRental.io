@@ -2,7 +2,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif; /* Clean, standard font */
   /* 1. Set the image path */
-    background-image: url('Car background.jpg'); 
+    background-image: url('Car_background.jpg'); 
     
     /* 2. Scale the image to cover the entire viewport */
     background-size: cover; 
