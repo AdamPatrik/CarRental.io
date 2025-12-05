@@ -1,44 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Sign in</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent-A-Car Login</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="page">
-    <section class="hero">
-      <div class="hero-left">
-        <div class="logo">facebook</div>
-        <p class="tagline">Facebook helps you connect and share with the people in your life.</p>
-      </div>
 
-      <aside class="hero-right">
-        <div class="card login-card" role="region" aria-label="Login">
-          <form id="login-form" novalidate>
-            <input id="email" name="email" type="email" placeholder="Email address or phone number" required autocomplete="email" />
-            <input id="password" name="password" type="password" placeholder="Password" required autocomplete="current-password" />
+    <div class="login-container">
+        <h2>Member Login - Rent-A-Car</h2>
 
-            <button id="submit" class="btn btn-primary" type="submit">Log in</button>
+        <form action="/login" method="post">
 
-            <div class="forgot-wrap">
-              <a href="#" class="link-muted">Forgotten password?</a>
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="enter your email" required>
             </div>
 
-            <hr class="divider" />
-
-            <div class="create-wrap">
-              <button id="create" class="btn btn-create" type="button">Create new account</button>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="••••••••" required>
             </div>
-          </form>
+
+            <button type="submit" class="login-btn">
+                Log In & Start Your Journey
+            </button>
+
+        </form>
+
+        <div class="register-prompt">
+            Don't have an account? <a href="/register">Create an Account</a>
         </div>
+    </div>
 
-        <p class="page-note">Create a Page for a celebrity, brand or business.</p>
-      </aside>
-    </section>
-  </main>
-
-  <script src="script.js"></script>
 </body>
 </html>
