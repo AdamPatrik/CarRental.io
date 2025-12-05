@@ -3,29 +3,42 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Login</title>
-  <!-- Make sure this path points to your CSS file -->
+  <title>Sign in</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="container">
-    <form id="login-form" class="card" novalidate>
-      <h1 class="title">Sign in</h1>
-
-      <div class="field">
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" required autocomplete="email" />
+  <main class="page">
+    <section class="hero">
+      <div class="hero-left">
+        <div class="logo">facebook</div>
+        <p class="tagline">Facebook helps you connect and share with the people in your life.</p>
       </div>
 
-      <div class="field">
-        <label for="password">Password</label>
-        <input id="password" name="password" type="password" required autocomplete="current-password" />
-      </div>
+      <aside class="hero-right">
+        <div class="card login-card" role="region" aria-label="Login">
+          <form id="login-form" novalidate>
+            <input id="email" name="email" type="email" placeholder="Email address or phone number" required autocomplete="email" />
+            <input id="password" name="password" type="password" placeholder="Password" required autocomplete="current-password" />
 
-      <div class="field">
-        <button id="submit" class="primary" type="submit">Sign in</button>
-      </div>
-    </form>
+            <button id="submit" class="btn btn-primary" type="submit">Log in</button>
+
+            <div class="forgot-wrap">
+              <a href="#" class="link-muted">Forgotten password?</a>
+            </div>
+
+            <hr class="divider" />
+
+            <div class="create-wrap">
+              <button id="create" class="btn btn-create" type="button">Create new account</button>
+            </div>
+          </form>
+        </div>
+
+        <p class="page-note">Create a Page for a celebrity, brand or business.</p>
+      </aside>
+    </section>
   </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
