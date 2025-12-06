@@ -15,10 +15,10 @@ body {
     padding: 20px;
 }
 
-/* Introduction Content (Branding area inside the card) */
+/* Introduction Content (Branding area - now outside the card) */
 .intro-content {
     text-align: center;
-    max-width: 396px; 
+    max-width: 400px; 
     margin-bottom: 20px;
 }
 
@@ -26,11 +26,11 @@ body {
     color: #1877f2; /* Bright blue for branding */
     font-size: 3.5rem;
     margin-bottom: 5px;
-    margin-top: 0; /* Remove default margin for clean spacing */
+    margin-top: 0; 
 }
 
 .welcome-message {
-    font-size: 1.25rem; /* Slightly smaller size now that it's inside the card */
+    font-size: 1.5rem; /* Resized for better look outside the card */
     color: #1c1e21;
     font-weight: 500;
     margin-top: 10px;
@@ -38,48 +38,49 @@ body {
 }
 
 .intro-content p {
-    font-size: 1rem;
+    font-size: 1.25rem; /* Resized for better look outside the card */
     color: #1c1e21;
 }
 
 /* The White Card Container */
 .login-container {
-    background-color: #ffffff;
-    padding: 20px; /* Reduced padding for a compact look */
+    background-color: #ffffff; 
+    padding: 20px 20px 28px 20px; /* Restored original padding */
     border-radius: 8px;
-    /* Key to the look: subtle but noticeable shadow */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 396px;
     text-align: center;
 }
 
-/* Input Fields */
+/* We don't need the separator inside the card anymore since the branding is gone */
+.login-container .separator {
+    display: none; 
+}
+
+/* Input Fields - (no change) */
 .input-group {
     margin-bottom: 10px;
 }
-
 .input-group input {
     width: 100%;
     padding: 14px 16px;
     font-size: 17px;
-    border: 1px solid #dddfe2; /* Light gray border */
+    border: 1px solid #dddfe2; 
     border-radius: 6px;
     box-sizing: border-box;
 }
-
-/* Input Focus (Blue border/glow when clicking the field) */
 .input-group input:focus {
     border-color: #1877f2;
     box-shadow: 0 0 0 1px #1877f2;
     outline: none;
 }
 
-/* Primary Login Button (Blue) */
+/* Primary Login Button (Blue) - (no change) */
 .login-btn {
     width: 100%;
     padding: 14px 16px;
-    background-color: #1877f2; /* Bright Blue */
+    background-color: #1877f2; 
     color: white;
     border: none;
     border-radius: 6px;
@@ -89,38 +90,35 @@ body {
     margin-top: 10px;
     transition: background-color 0.3s;
 }
-
 .login-btn:hover {
     background-color: #166fe5; 
 }
 
-/* Forgotten Password Link */
+/* Forgotten Password Link - (no change) */
 .forgot-password {
     margin: 15px 0;
 }
-
 .forgot-password a {
     color: #1877f2;
     font-size: 14px;
     text-decoration: none;
 }
-
 .forgot-password a:hover {
     text-decoration: underline;
 }
 
-/* Separator Line */
+/* Separator Line (below forgotten password) - (no change) */
 .separator {
     border: 0;
     border-top: 1px solid #dddfe2;
     margin: 15px 0;
 }
 
-/* Create New Account Button (Green) */
+/* Create New Account Button (Green) - (no change) */
 .create-account-btn {
     display: inline-block;
     padding: 12px 16px;
-    background-color: #42b72a; /* Bright Green */
+    background-color: #42b72a; 
     color: white;
     border-radius: 6px;
     text-decoration: none;
@@ -129,23 +127,26 @@ body {
     margin: 10px 0;
     transition: background-color 0.3s;
 }
-
 .create-account-btn:hover {
     background-color: #36a420; 
 }
 
-/* Optional Footer Link Styling */
+/* Optional Footer Link Styling - (no change, but the element is removed from HTML) */
 .page-link {
-    margin-top: 25px;
-    text-align: center;
-    font-size: 0.85rem;
+    display: none; /* Hide the link just in case, though it's removed from HTML */
 }
 
-.page-link a {
-    color: #1c1e21;
-    text-decoration: none;
-}
+/* Media Query for larger screens (Re-enables the side-by-side layout) */
+@media (min-width: 900px) {
+    .login-page {
+        flex-direction: row; /* Change to horizontal layout */
+        gap: 80px; /* Space between the logo area and the card */
+    }
 
-.page-link a:hover {
-    text-decoration: underline;
+    .intro-content {
+        text-align: left;
+        margin-bottom: 0;
+        /* Aligns the introductory text vertically with the card */
+        padding-bottom: 150px; 
+    }
 }
