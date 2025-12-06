@@ -3,7 +3,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     
     /* BACKGROUND IMAGE STYLES: Image covers the left 50% */
-    background-image: url('Car background.jpg'); 
+    background-image: url('Car_background.jpg'); 
     background-repeat: no-repeat; 
     background-size: 50% ; /* Image covers exactly the left half of the viewport */
     background-position: left center; 
