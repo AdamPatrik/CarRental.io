@@ -1,12 +1,12 @@
 /* General Styling and Layout */
 body {
-    font-family: Arial, Helvetica, sans-serif; /* Clean, standard font */
-    background-color: white; /* Light, neutral background */
+    font-family: Arial, Helvetica, sans-serif; 
+    background-color: #f0f2f5; /* Light background color */
     margin: 0;
 }
 
 .login-page {
-    /* Flexbox to center the content horizontally and vertically */
+    /* Flexbox to center the content horizontally and vertically on the page */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,39 +15,43 @@ body {
     padding: 20px;
 }
 
-/* Introduction Content (Text on the left side of the card in the original image) */
+/* Introduction Content (Branding area inside the card) */
 .intro-content {
     text-align: center;
-    max-width: 400px; /* Adjust as needed */
+    max-width: 396px; 
     margin-bottom: 20px;
 }
 
-.intro-content h1 {
+.intro-content .brand-text {
     color: #1877f2; /* Bright blue for branding */
     font-size: 3.5rem;
     margin-bottom: 5px;
+    margin-top: 0; /* Remove default margin for clean spacing */
+}
+
+.welcome-message {
+    font-size: 1.25rem; /* Slightly smaller size now that it's inside the card */
+    color: #1c1e21;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .intro-content p {
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: #1c1e21;
 }
 
 /* The White Card Container */
 .login-container {
     background-color: #ffffff;
-    padding: 20px 20px 28px 20px;
+    padding: 20px; /* Reduced padding for a compact look */
     border-radius: 8px;
     /* Key to the look: subtle but noticeable shadow */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 396px;
     text-align: center;
-}
-
-/* Heading Styling */
-.login-container h2 {
-    display: none; /* Hiding the H2 since the logo/intro is outside the card */
 }
 
 /* Input Fields */
@@ -75,7 +79,7 @@ body {
 .login-btn {
     width: 100%;
     padding: 14px 16px;
-    background-color: #1877f2; /* Facebook Blue */
+    background-color: #1877f2; /* Bright Blue */
     color: white;
     border: none;
     border-radius: 6px;
@@ -83,10 +87,11 @@ body {
     font-size: 1.25rem;
     font-weight: bold;
     margin-top: 10px;
+    transition: background-color 0.3s;
 }
 
 .login-btn:hover {
-    background-color: #166fe5; /* Slightly darker blue on hover */
+    background-color: #166fe5; 
 }
 
 /* Forgotten Password Link */
@@ -113,10 +118,9 @@ body {
 
 /* Create New Account Button (Green) */
 .create-account-btn {
-    /* Display as a block element to control size */
     display: inline-block;
     padding: 12px 16px;
-    background-color: #42b72a; /* Facebook Green */
+    background-color: #42b72a; /* Bright Green */
     color: white;
     border-radius: 6px;
     text-decoration: none;
@@ -127,7 +131,7 @@ body {
 }
 
 .create-account-btn:hover {
-    background-color: #36a420; /* Darker green on hover */
+    background-color: #36a420; 
 }
 
 /* Optional Footer Link Styling */
@@ -144,19 +148,4 @@ body {
 
 .page-link a:hover {
     text-decoration: underline;
-}
-
-/* Media Query for larger screens (to put intro content on the left) */
-@media (min-width: 900px) {
-    .login-page {
-        flex-direction: row; /* Change to horizontal layout */
-        gap: 80px; /* Space between the logo area and the card */
-    }
-
-    .intro-content {
-        text-align: left;
-        margin-bottom: 0;
-        /* Position the intro content to align properly with the form card */
-        padding-bottom: 150px; 
-    }
 }
